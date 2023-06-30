@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Input</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/table.css')}}">
+</head>
+
+<body>
+    <div class="cont">
+        <a class="logout" href="{{url_for('logout')}}" onclick="logout()">Logout</a>
+    <h1>Marks Details</h1>
+    <form action=" " method="post" onsubmit="return submitted()">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Roll No</td>
+                <td><input type="text" name="rollno" required></td>
+            </tr>
+            <tr>
+                <td>Mark 1</td>
+                <td><input type="text" name="mark1" required></td>
+            </tr>
+            <tr>
+                <td>Mark 2</td>
+                <td><input type="text" name="mark2" required></td>
+            </tr>
+            <tr>
+                <td>Mark 3</td>
+                <td><input type="text" name="mark3" required></td>
+            </tr>
+            <tr>
+                <td>Mark 4</td>
+                <td><input type="text" name="mark4" required></td>
+            </tr>
+            <tr>
+                <td>Mark 5</td>
+                <td><input type="text" name="mark5" required></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><input type="text" name="total" required></td>
+            </tr>
+            <tr>
+                <td>Average</td>
+                <td><input type="text" name="average"required ></td>
+            </tr>
+            <tr >
+                <td><input type="submit" class="button" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/register.js')}}"></script>
+</body>
+
+</html>

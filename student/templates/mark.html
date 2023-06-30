@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/mark.css')}}">
+</head>
+
+<body>
+    <header>
+        <h1>MARK DASHBOARD</h1>
+        
+    </header>
+    <table border=1 >
+        <tr>
+         <th class="name">NAME</th>
+         <th>ROLLNO</th>
+         <th>SUBJECT 1</th>
+         <th>SUBJECT 2</th>
+         <th>SUBJECT 3</th>
+         <th>SUBJECT 4</th>
+         <th>SUBJECT 5</th>
+         <th>TOTAL</th>
+         <th>PERCENTAGE</th>
+        </tr>
+        {% for data in datas %}
+        <tr>
+            <td >{{data.Name}}</td>
+            <td>{{data.Rollno}}</td>
+            <td>{{data.Mark1}}</td>
+            <td>{{data.Mark2}}</td>
+            <td>{{data.Mark3}}</td>
+            <td>{{data.Mark4}}</td>
+            <td>{{data.Mark5}}</td>
+            <td>{{data.Total}}</td>
+            <td>{{data.average}}</td>
+        </tr>
+        {% endfor %}
+       
+    </table>
+    <div class="logout">
+      <a href="{{url_for('logout')}}" onclick="logout()">Logout</a>
+    </div>
+</body>
+
+</html>
